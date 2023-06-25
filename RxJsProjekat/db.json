@@ -1,0 +1,120 @@
+{
+
+    "people": [
+        {
+          "id": 1,
+          "name": "Ana Jovanovic",
+          "algorithms" : 20,
+          "front" : 60,
+          "back" : 40,
+          "database" : 80,
+          "creativity" : 100
+        },
+
+        {
+            "id": 2,
+            "name": "Marko Brankovic",
+            "algorithms" : 96,
+            "front" : 30,
+            "back" : 91,
+            "database" : 78,
+            "creativity" : 25
+          },
+
+          {
+            "id": 3,
+            "name": "Tina Ikovic",
+            "algorithms" : 60,
+            "front" : 55,
+            "back" : 100,
+            "database" : 100,
+            "creativity" : 45
+          },
+
+          {
+            "id": 4,
+            "name": "Sava Petrovic",
+            "algorithms" : 63,
+            "front" : 92,
+            "back" : 84,
+            "database" : 52,
+            "creativity" : 77
+          },
+
+          {
+            "id": 5,
+            "name": "Tea Marinkovic",
+            "algorithms" : 45,
+            "front" : 62,
+            "back" : 91,
+            "database" : 98,
+            "creativity" : 66
+          },
+
+          {
+            "id": 6,
+            "name": "Mirko Mirkovic",
+            "algorithms" : 90,
+            "front" : 35,
+            "back" : 70,
+            "database" : 63,
+            "creativity" : 95
+          },
+
+          {
+            "id": 7,
+            "name": "Anja Jovic",
+            "algorithms" : 40,
+            "front" : 59,
+            "back" : 52,
+            "database" : 81,
+            "creativity" : 53
+          },
+
+          {
+            "id": 8,
+            "name": "Milan Jovanovic",
+            "algorithms" : 45,
+            "front" : 80,
+            "back" : 80,
+            "database" : 80,
+            "creativity" : 63
+          },
+          {
+            "id": 9,
+            "name": "Darko Jovic",
+            "algorithms" : 44,
+            "front" : 55,
+            "back" : 66,
+            "database" : 77,
+            "creativity" : 58
+          },
+          {
+            "id": 10,
+            "name": "Darija Jovic",
+            "algorithms" : 90,
+            "front" : 55,
+            "back" : 90,
+            "database" : 89,
+            "creativity" : 77
+          },
+          {
+            "id": 11,
+            "name": "Ivan Stosic",
+            "algorithms" : 99,
+            "front" : 88,
+            "back" : 100,
+            "database" : 100,
+            "creativity" : 70
+          },
+          {
+            "id": 9,
+            "name": "Jovan Pavic",
+            "algorithms" : 89,
+            "front" : 100,
+            "back" : 80,
+            "database" : 65,
+            "creativity" : 85
+          }
+    ]
+}
