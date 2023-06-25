@@ -1,4 +1,4 @@
-document.write("hello world");
+document.write("hello world new");
 
 class User {
     _name : string;
