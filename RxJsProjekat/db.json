@@ -3,7 +3,7 @@
     "people": [
         {
           "id": 1,
-          "name": "Ana Jovanovic",
+          "name": "Ana",
           "algorithms" : 20,
           "front" : 60,
           "back" : 40,
@@ -13,7 +13,7 @@
 
         {
             "id": 2,
-            "name": "Marko Brankovic",
+            "name": "Marko",
             "algorithms" : 96,
             "front" : 30,
             "back" : 91,
@@ -23,7 +23,7 @@
 
           {
             "id": 3,
-            "name": "Tina Ikovic",
+            "name": "Tina",
             "algorithms" : 60,
             "front" : 55,
             "back" : 100,
@@ -33,7 +33,7 @@
 
           {
             "id": 4,
-            "name": "Sava Petrovic",
+            "name": "Sava",
             "algorithms" : 63,
             "front" : 92,
             "back" : 84,
@@ -43,7 +43,7 @@
 
           {
             "id": 5,
-            "name": "Tea Marinkovic",
+            "name": "Tea",
             "algorithms" : 45,
             "front" : 62,
             "back" : 91,
@@ -53,7 +53,7 @@
 
           {
             "id": 6,
-            "name": "Mirko Mirkovic",
+            "name": "Mirko",
             "algorithms" : 90,
             "front" : 35,
             "back" : 70,
@@ -63,7 +63,7 @@
 
           {
             "id": 7,
-            "name": "Anja Jovic",
+            "name": "Anja",
             "algorithms" : 40,
             "front" : 59,
             "back" : 52,
@@ -73,7 +73,7 @@
 
           {
             "id": 8,
-            "name": "Milan Jovanovic",
+            "name": "Milan",
             "algorithms" : 45,
             "front" : 80,
             "back" : 80,
@@ -82,7 +82,7 @@
           },
           {
             "id": 9,
-            "name": "Darko Jovic",
+            "name": "Darko",
             "algorithms" : 44,
             "front" : 55,
             "back" : 66,
@@ -91,7 +91,7 @@
           },
           {
             "id": 10,
-            "name": "Darija Jovic",
+            "name": "Darija",
             "algorithms" : 90,
             "front" : 55,
             "back" : 90,
@@ -100,7 +100,7 @@
           },
           {
             "id": 11,
-            "name": "Ivan Stosic",
+            "name": "Ivan",
             "algorithms" : 99,
             "front" : 88,
             "back" : 100,
@@ -109,7 +109,7 @@
           },
           {
             "id": 9,
-            "name": "Jovan Pavic",
+            "name": "Jovan",
             "algorithms" : 89,
             "front" : 100,
             "back" : 80,
