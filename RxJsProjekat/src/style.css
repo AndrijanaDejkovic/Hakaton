@@ -1,0 +1,58 @@
+body {
+    display: flex;
+  }
+  
+  .teamCreatorDiv {
+    border: 1px solid black;
+    width: 700px;
+    height: 750px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .inputAndLabelDiv {
+    display: flex;
+    flex-direction: column;
+    padding: 3px;
+    border: 1px solid violet;
+    margin: 5px;
+  }
+  
+  .teamViewDiv {
+    margin: 5px;
+    background-color: rgba(220, 120, 230, 0.664);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .gkDiv,
+  .defDiv,
+  .midDiv,
+  .attDiv {
+    margin: 10px 5px 70px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .midDiv {
+    justify-content: space-around;
+  }
+  .playerDetails {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+  }
+  
+  .resultsDiv {
+    margin-left: 50px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .resultsDiv label {
+    border: 1px solid black;
+    margin-top: 10px;
+  }
+  

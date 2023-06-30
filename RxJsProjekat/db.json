@@ -108,7 +108,7 @@
             "creativity" : 70
           },
           {
-            "id": 9,
+            "id": 12,
             "name": "Jovan",
             "algorithms" : 89,
             "front" : 100,
@@ -116,5 +116,77 @@
             "database" : 65,
             "creativity" : 85
           }
-    ]
+        ],
+
+          "teams":[
+            {
+              "id":1,
+              "name":"ElfakTeam",
+              "teamStrength":318,
+              "hoursWorking" : 12
+            },
+            {
+              "id":2,
+              "name":"PMFTeam",
+              "teamStrength":250,
+              "hoursWorking" : 15
+
+            },
+            {
+              "id":3,
+              "name":"Metropolitans",
+              "teamStrength":400,
+              "hoursWorking" : 9
+            },
+            {
+              "id":4,
+              "name":"Bees",
+              "teamStrength":320,
+              "hoursWorking" : 20
+
+            },
+            {
+              "id":5,
+              "name":"ErrorTeam",
+              "teamStrength": 210,
+              "hoursWorking" : 16
+
+            },
+            {
+              "id":6,
+              "name":"Vr1",
+              "teamStrength":420,
+              "hoursWorking" : 7
+
+            },
+            {
+              "id":7,
+              "name":"Team1",
+              "teamStrength":320,
+              "hoursWorking" : 12
+
+            },
+            {
+              "id":8,
+              "name":"DreamTeam",
+              "teamStrength":249,
+              "hoursWorking" : 21
+
+            },
+            {
+              "id":9,
+              "name":"TheCoders",
+              "teamStrength":298,
+              "hoursWorking" : 20
+
+            },
+            {
+              "id":10,
+              "name":"WindowsTeam",
+              "teamStrength":480,
+              "hoursWorking" : 9
+
+            }
+          ]
+    
 }

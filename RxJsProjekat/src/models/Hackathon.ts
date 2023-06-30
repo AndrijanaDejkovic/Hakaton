@@ -1,6 +1,16 @@
+import { Observable } from "rxjs";
+import { Rival } from "./Rival";
 import { Team } from "./Team";
 
 export class Hackhaton {
-    teams : Team[] = [];
+    newTeam : Team;
+
+    rivalsTeams: Rival[] = [];
+    rivalsTeamsObservables: Observable<Rival[]>;
+
+    constructor(rivalsObs: Observable<Rival[]>, newTeam: Team) {
+        this.newTeam = newTeam;
+        this.rivalsTeamsObservables = rivalsObs;
+      }
 
 }

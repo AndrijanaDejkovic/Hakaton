@@ -3,6 +3,8 @@ import { Member } from "../models/Member";
 import { environment } from "../environment";
 import { drawMember } from "../view/ViewConfig";
 import { Team } from "../models/Team";
+import { Rival } from "../models/Rival";
+import { Hackhaton } from "../models/Hackathon";
 
 export function memberInputObservable(
     inputField: HTMLInputElement,
@@ -120,9 +122,22 @@ export function teamNameInputObservable(
       ]).subscribe(([first, second, third, fourth]) => {
         if (first && second && third && fourth) {
           let team = new Team([first, second, third, fourth], teamName);
-            //code for competition (just sort elements)
+          let hackathon = new Hackhaton(fetchRivalsTeams(), team);
+          hackathon.startHackathon();
+        
         } else {
-          console.log("wrong input");
+          console.log("Your input is not correct");
         }
       });
+  }
+
+  export function fetchRivalsTeams(): Observable<Rival[]> {
+    return from(
+      fetch(`${environment.BASE_URL}/teams`)
+        .then((res) => {
+          if (res.ok) return res.json();
+          else throw new Error("Team not found");
+        })
+        .catch((err) => console.log("error"))
+    );
   }

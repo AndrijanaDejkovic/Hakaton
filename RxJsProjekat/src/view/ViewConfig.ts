@@ -1,4 +1,6 @@
 import { Member } from "../models/Member";
+import { Rival } from "../models/Rival";
+import { Team } from "../models/Team";
 
 export function drawMember(
     host : HTMLDivElement,
@@ -51,6 +53,39 @@ function drawInputs(host: HTMLElement, inputs: HTMLInputElement[]) {
     });
   }
 
-  //TODO
+  export function drawResults(
+    rivals: Rival[],
+    newTeam: Team,
+    placeTaken: number
+  ) {
+    const host = document.querySelector(".resultsDiv");
+    const resultLabel = document.createElement("label");
+    host.appendChild(resultLabel);
 
-  //drawing functions for base elements, team, and result (sort list of teams based on points)
+    switch (placeTaken) {
+      case 1:
+        resultLabel.style.backgroundColor = "gold";
+        break;
+      case 2:
+        resultLabel.style.backgroundColor = "silver";
+        break;
+      case 3:
+        resultLabel.style.backgroundColor = "brown";
+        break;
+      default:
+        resultLabel.style.backgroundColor = "white";
+    }
+    rivals.sort((a, b) => (b.teamStrength * b.hoursWorking) - (a.teamStrength * a.hoursWorking));
+    rivals.forEach(rival =>{
+        const nameLabel = document.createElement("label");
+        nameLabel.innerHTML = `${rival.name} : ${rival.teamStrength * rival.hoursWorking}`;
+        host.appendChild(nameLabel);
+    }
+    );
+       
+    resultLabel.innerHTML = `${newTeam.teamName} has taken ${placeTaken}. place`;
+  }
+
+
+  //TODO
+  //drawing new teamm, something like table to look like and for creating  basic elements
