@@ -8,6 +8,7 @@ export class Team{
     constructor(members : Member[], teamName : string) {
         this.members = members;
         this.teamName = teamName;
+        this.hoursWorking = Math.random() * 24;
     }
 
     getTeamStrength() : number {
@@ -15,7 +16,7 @@ export class Team{
         this.members.forEach((member) => {
             strength+=member.algorithms + member.front + member.back + member.creativity + member.database;
         });
-        this.hoursWorking = Math.random() * 24;
+       
 
 
         return strength / this.members.length * this.hoursWorking;

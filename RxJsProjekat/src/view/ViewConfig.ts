@@ -9,10 +9,14 @@ export function drawMember(
     memberNameLabel : HTMLLabelElement,
     memberKnowledgeLabel : HTMLLabelElement
 ) {
+
+    if (host === undefined)
+       console.log("UNDEFINED");
     host.appendChild(memberDetailsDiv);
+    memberDetailsDiv.style.background = "#ADD8E6"; 
 
     if (member) {
-        memberDetailsDiv.style.background = "#ADD8E6"; //light blue shade
+        memberDetailsDiv.style.background = "#ADD8E6"; 
         memberNameLabel.innerHTML = member.name;
         memberDetailsDiv.appendChild(memberNameLabel);
         memberKnowledgeLabel.innerHTML = `Algorithms: ${member.algorithms} Back: ${member.back} Front: ${member.front} Database: ${member.database} Creativity : ${member.creativity}`;
@@ -62,6 +66,8 @@ function drawInputs(host: HTMLElement, inputs: HTMLInputElement[]) {
     const resultLabel = document.createElement("label");
     host.appendChild(resultLabel);
 
+    console.log(placeTaken);
+
     switch (placeTaken) {
       case 1:
         resultLabel.style.backgroundColor = "gold";
@@ -83,9 +89,57 @@ function drawInputs(host: HTMLElement, inputs: HTMLInputElement[]) {
     }
     );
        
-    resultLabel.innerHTML = `${newTeam.teamName} has taken ${placeTaken}. place`;
+    resultLabel.innerHTML = `${newTeam.teamName} has taken ${placeTaken}. place and point : ${newTeam.getTeamStrength()}`;
+  }
+
+  export function drawTeamCreator(
+    host: HTMLElement,
+    teamViewContainer: HTMLDivElement,
+    inputs: HTMLInputElement[]
+  ) {
+    const teamCreatorContainer: HTMLDivElement = document.createElement("div");
+    teamCreatorContainer.classList.add("teamCreatorDiv");
+    host.appendChild(teamCreatorContainer);
+  
+    drawInputs(teamCreatorContainer, inputs);
+  
+    teamViewContainer.classList.add("teamViewDiv");
+    teamCreatorContainer.appendChild(teamViewContainer);
   }
 
 
-  //TODO
-  //drawing new teamm, something like table to look like and for creating  basic elements
+  export function createElements(
+    inputFields: HTMLInputElement[],
+    memberDivs : HTMLDivElement[],
+    memberDetails: HTMLDivElement[],
+    memberNameLabels: HTMLLabelElement[],
+    memberKnowledgeLebels: HTMLLabelElement[],
+    teamViewContainer: HTMLDivElement,
+    midDiv: HTMLDivElement,
+    positionDivs: HTMLDivElement[],
+    classNames: string[]
+  ) {
+    for (let i = 0; i < 5; ++i) {
+      inputFields[i] = document.createElement("input");
+      memberDetails[i] = document.createElement("div");
+      memberDivs[i] = document.createElement("div");
+      memberDetails[i].classList.add("memberDetails");
+      memberNameLabels[i] = document.createElement("label");
+      memberKnowledgeLebels[i] = document.createElement("label");
+    }
+  
+    midDiv = document.createElement("div");
+    midDiv.classList.add("midDiv");
+  
+    for (let i = 0; i < 5; ++i) {
+      positionDivs[i] = document.createElement("div");
+      positionDivs[i].classList.add(classNames[i]);
+      if (classNames[i] !== "leftMidDiv" || classNames[i] !== "rightMidDiv")
+        teamViewContainer.appendChild(positionDivs[i]);
+      if (i === 2) teamViewContainer.appendChild(midDiv);
+    }
+  
+    midDiv.appendChild(positionDivs[2]);
+    midDiv.appendChild(positionDivs[3]);
+  }
+  

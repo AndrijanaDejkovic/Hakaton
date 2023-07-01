@@ -61,7 +61,7 @@ export function teamNameInputObservable(
     memberKnowledges : HTMLLabelElement[]
   ){
     const firstMemberObservable = memberInputObservable(inputFields[0], memberDivs[0]);
-
+    console.log(inputFields.length);
     firstMemberObservable.subscribe((member : Member) =>
         drawMember(
             memberDivs[0],
@@ -110,17 +110,20 @@ export function teamNameInputObservable(
 
     let teamName = "";
 
-    const teamNameObservable = teamNameInputObservable(inputFields[4]).subscribe((value) => {
+    const teamNameObservable = teamNameInputObservable(inputFields[4]);
+
+    teamNameObservable.subscribe((value) => {
         teamName = value;
-      });
+    });
  
     combineLatest([
         firstMemberObservable,
         secondMemberObservable,
         thirdMemberObservable,
-        fourthMemberObservable,
-      ]).subscribe(([first, second, third, fourth]) => {
-        if (first && second && third && fourth) {
+        fourthMemberObservable, 
+        teamNameObservable
+      ]).subscribe(([first, second, third, fourth, fifth]) => {
+        if (first && second && third && fourth) { 
           let team = new Team([first, second, third, fourth], teamName);
           let hackathon = new Hackhaton(fetchRivalsTeams(), team);
           hackathon.startHackathon();
