@@ -19,8 +19,8 @@ export class Hackhaton {
 
       compareTeams(rivals: Rival[]) {
         const observables = rivals.map((rival) =>
-        of(rival).pipe(delay(1000))
-         );
+            of(rival).pipe(delay(1000))
+        );
 
         forkJoin(observables).subscribe((data) => {
         data.forEach((rival) => {

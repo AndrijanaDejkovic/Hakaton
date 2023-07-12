@@ -10,16 +10,18 @@ export function drawMember(
     memberKnowledgeLabel : HTMLLabelElement
 ) {
 
-    if (host === undefined)
-       console.log("UNDEFINED");
+  console.log("Draw member is called");
+
+    document.body.appendChild(host);
     host.appendChild(memberDetailsDiv);
-    memberDetailsDiv.style.background = "#ADD8E6"; 
+    memberDetailsDiv.style.background = "yellow"; 
 
     if (member) {
         memberDetailsDiv.style.background = "#ADD8E6"; 
+        memberDetailsDiv.style.border = "solid black 1px"
         memberNameLabel.innerHTML = member.name;
         memberDetailsDiv.appendChild(memberNameLabel);
-        memberKnowledgeLabel.innerHTML = `Algorithms: ${member.algorithms} Back: ${member.back} Front: ${member.front} Database: ${member.database} Creativity : ${member.creativity}`;
+        memberKnowledgeLabel.innerHTML = ` : Algorithms: ${member.algorithms} Back: ${member.back} Front: ${member.front} Database: ${member.database} Creativity : ${member.creativity}`;
         memberDetailsDiv.append(memberKnowledgeLabel);
     }
     else {
@@ -79,12 +81,15 @@ function drawInputs(host: HTMLElement, inputs: HTMLInputElement[]) {
         resultLabel.style.backgroundColor = "brown";
         break;
       default:
-        resultLabel.style.backgroundColor = "white";
+        resultLabel.style.backgroundColor = "green";
     }
+
+    resultLabel.style.display = "block";
     rivals.sort((a, b) => (b.teamStrength * b.hoursWorking) - (a.teamStrength * a.hoursWorking));
     rivals.forEach(rival =>{
         const nameLabel = document.createElement("label");
         nameLabel.innerHTML = `${rival.name} : ${rival.teamStrength * rival.hoursWorking}`;
+        nameLabel.style.display = "block";
         host.appendChild(nameLabel);
     }
     );
@@ -128,18 +133,5 @@ function drawInputs(host: HTMLElement, inputs: HTMLInputElement[]) {
       memberKnowledgeLebels[i] = document.createElement("label");
     }
   
-    midDiv = document.createElement("div");
-    midDiv.classList.add("midDiv");
-  
-    for (let i = 0; i < 5; ++i) {
-      positionDivs[i] = document.createElement("div");
-      positionDivs[i].classList.add(classNames[i]);
-      if (classNames[i] !== "leftMidDiv" || classNames[i] !== "rightMidDiv")
-        teamViewContainer.appendChild(positionDivs[i]);
-      if (i === 2) teamViewContainer.appendChild(midDiv);
-    }
-  
-    midDiv.appendChild(positionDivs[2]);
-    midDiv.appendChild(positionDivs[3]);
   }
   

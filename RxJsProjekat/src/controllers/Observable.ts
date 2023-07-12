@@ -126,6 +126,7 @@ export function teamNameInputObservable(
         if (first && second && third && fourth) { 
           let team = new Team([first, second, third, fourth], teamName);
           let hackathon = new Hackhaton(fetchRivalsTeams(), team);
+          
           hackathon.startHackathon();
         
         } else {

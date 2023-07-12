@@ -49,6 +49,7 @@ body {
   .resultsDiv label {
     border: 1px solid black;
     margin-top: 10px;
+    flex-direction: column;
   }
 
   .memberDetails {
