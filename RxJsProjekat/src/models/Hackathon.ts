@@ -17,34 +17,30 @@ export class Hackhaton {
         this.teamStrenght = newTeam.getTeamStrength();
       }
 
-      compareTeams(rivals: Rival[]) {
+      findTeamPosition(rivals: Rival[]) {
         const observables = rivals.map((rival) =>
             of(rival).pipe(delay(1000))
         );
 
         forkJoin(observables).subscribe((data) => {
         data.forEach((rival) => {
-            this.determineWinner(this.teamStrenght, rival);
+            this.compareTwoTeams(this.teamStrenght, rival);
         });
 
-        console.log("ehehe" + this.placeTaken);
         drawResults(rivals, this.newTeam, this.placeTaken);
         });
-
-
       }
 
       startHackathon() {
         this.rivalsTeamsObservables.subscribe((rivals) => {
-          this.compareTeams(rivals);
+          this.findTeamPosition(rivals);
           this.placeTaken = rivals.length + 1;
         });
       }
 
-      determineWinner(newTeamStrength: number, rival: Rival) {
+      compareTwoTeams(newTeamStrength: number, rival: Rival) {
         
         if (newTeamStrength > (rival.teamStrength * rival.hoursWorking)) {
-            //console.log(newTeamStrength + " vs stari : " + rival.teamStrength * rival.hoursWorking );
             this.placeTaken--;
         }
       }

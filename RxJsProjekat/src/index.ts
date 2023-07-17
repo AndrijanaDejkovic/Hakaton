@@ -5,6 +5,7 @@ import {
   } from "./view/ViewConfig";
   import { makeTeamObservable } from "./controllers/Observable";
   
+  
   let inputFields: HTMLInputElement[] = [];
   let memberDivs: HTMLDivElement[] = [];
   let memberDetails: HTMLDivElement[] = [];
@@ -12,28 +13,15 @@ import {
   let memberKnowledgeLabels: HTMLLabelElement[] = [];
   
   let teamViewContainer: HTMLDivElement = document.createElement("div");
-  
-  let midDiv: HTMLDivElement;
-  
-  let positionDivs: HTMLDivElement[] = [];
-  let classNames: string[] = [
-    "gkDiv",
-    "defDiv",
-    "leftMidDiv",
-    "rightMidDiv",
-    "attDiv",
-  ];
-  
+    
+  //console.log(process.env.BASE_URL)
+
   createElements(
     inputFields,
     memberDivs,
     memberDetails,
     memberNameLabels,
-    memberKnowledgeLabels,
-    teamViewContainer,
-    midDiv,
-    positionDivs,
-    classNames
+    memberKnowledgeLabels
   );
   
   drawTeamCreator(document.body, teamViewContainer, inputFields);

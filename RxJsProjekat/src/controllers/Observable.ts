@@ -1,10 +1,11 @@
 import { Observable, auditTime, combineLatest, debounceTime, filter, from, fromEvent, map, switchMap, takeUntil } from "rxjs";
 import { Member } from "../models/Member";
-import { environment } from "../environment";
 import { drawMember } from "../view/ViewConfig";
 import { Team } from "../models/Team";
 import { Rival } from "../models/Rival";
 import { Hackhaton } from "../models/Hackathon";
+import { environment } from "../environment";
+
 
 export function memberInputObservable(
     inputField: HTMLInputElement,
@@ -61,7 +62,6 @@ export function teamNameInputObservable(
     memberKnowledges : HTMLLabelElement[]
   ){
     const firstMemberObservable = memberInputObservable(inputFields[0], memberDivs[0]);
-    console.log(inputFields.length);
     firstMemberObservable.subscribe((member : Member) =>
         drawMember(
             memberDivs[0],
@@ -130,7 +130,7 @@ export function teamNameInputObservable(
           hackathon.startHackathon();
         
         } else {
-          console.log("Your input is not correct");
+          console.log("Try again, your input is not correct");
         }
       });
   }

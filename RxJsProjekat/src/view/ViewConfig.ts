@@ -10,8 +10,6 @@ export function drawMember(
     memberKnowledgeLabel : HTMLLabelElement
 ) {
 
-  console.log("Draw member is called");
-
     document.body.appendChild(host);
     host.appendChild(memberDetailsDiv);
     memberDetailsDiv.style.background = "yellow"; 
@@ -81,7 +79,7 @@ function drawInputs(host: HTMLElement, inputs: HTMLInputElement[]) {
         resultLabel.style.backgroundColor = "brown";
         break;
       default:
-        resultLabel.style.backgroundColor = "green";
+        resultLabel.style.backgroundColor = "#ADD8E6";
     }
 
     resultLabel.style.display = "block";
@@ -119,10 +117,6 @@ function drawInputs(host: HTMLElement, inputs: HTMLInputElement[]) {
     memberDetails: HTMLDivElement[],
     memberNameLabels: HTMLLabelElement[],
     memberKnowledgeLebels: HTMLLabelElement[],
-    teamViewContainer: HTMLDivElement,
-    midDiv: HTMLDivElement,
-    positionDivs: HTMLDivElement[],
-    classNames: string[]
   ) {
     for (let i = 0; i < 5; ++i) {
       inputFields[i] = document.createElement("input");

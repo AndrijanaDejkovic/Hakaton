@@ -26,19 +26,6 @@ body {
     flex-direction: column;
   }
   
-  .gkDiv,
-  .defDiv,
-  .midDiv,
-  .attDiv {
-    margin: 10px 5px 70px;
-    display: flex;
-    justify-content: center;
-  }
-  
-  .midDiv {
-    justify-content: space-around;
-  }
-  
   
   .resultsDiv {
     margin-left: 50px;
@@ -49,7 +36,6 @@ body {
   .resultsDiv label {
     border: 1px solid black;
     margin-top: 10px;
-    flex-direction: column;
   }
 
   .memberDetails {
